@@ -1,0 +1,20 @@
+{
+    "name": "willy68/facture2pdf",
+    "type": "library",
+    "require": {
+        "spipu/html2pdf": "^5.2"
+    },
+    "license": "LGPL-3.0",
+    "authors": [
+        {
+            "name": "willy68",
+            "email": "william.lety@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+		"autoload": {
+				 "psr-4": {
+				    "Facture2Pdf\\": "src"
+				 }
+		}
+}
