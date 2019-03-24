@@ -10,7 +10,7 @@
  * Ce fichier ne doit contenir aucun <echo> ou autre fonction d'affichage!
  */
 $model = array(
-    'name' => 'facture_std',
+    'name' => 'devis_std',
     'css' => 'css.php',
     'footer' => 'footer.php',
     'repeated' => 'row.php',
