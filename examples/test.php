@@ -29,4 +29,4 @@ $fact_pdf->addLinesVar($ligne_factures);
 
 $fact_pdf->writeModel();
 
-$fact_pdf->output();
+$fact_pdf->output('facture.pdf');
