@@ -149,7 +149,7 @@ $ligne_factures = array(
                         'tva' => '156.00',
                         'total_ht' => '780.00',
                         'ttc' => '936.00'),
-
+/*
                         array( 'num_ligne' => '3.2',
                     	'type' => 'standard',
                         'libelle' => 'Fourniture de Lauriers du Portugal 80/100
@@ -171,7 +171,7 @@ $ligne_factures = array(
                         'tva' => '2.75',
                         'total_ht' => '50.00',
                         'ttc' => '52.75'),
-
+*/
                         array( 'num_ligne' => '',
                     	'type' => 'tranche_fin',
                         'libelle' => 'TOTAL Plantation d\'une haie de persistents',

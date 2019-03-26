@@ -25,7 +25,7 @@ $fact_pdf->addVar('total_tva', $total_tva);
  * lignes (articles) de facture dans une table (voir row.php)
  */
 $fact_pdf->addLinesVar($ligne_factures);
-// $fact_pdf->repeatThead(false);
+ $fact_pdf->repeatThead(false);
 
 $fact_pdf->writeModel();
 

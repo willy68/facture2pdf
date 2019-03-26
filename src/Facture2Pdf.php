@@ -248,6 +248,8 @@ class Facture2Pdf extends Html2Pdf
         if ($thead && $this->repeat_thead) {
           $this->writeHtml($thead);
         } 
+        // On est où sur la page
+        $y = $this->pdf->getY();
         $this->pdf->commitTransaction();
         $this->pdf->startTransaction();
         $closeTable = false;
@@ -260,7 +262,7 @@ class Facture2Pdf extends Html2Pdf
           $startTable = true;
           include $row_file;
           $row = ob_get_clean();
-          $startTable = false;
+          // $startTable = false;
         }
         // On l'ecrit dans le pdf
         $this->writeHtml($row);
