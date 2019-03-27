@@ -65,6 +65,7 @@
 .border-double{border: #000000 1px double;}
 
 .pad5{padding: 5px;}
+.pad5m{padding: 1.33mm;}
 .pad-l-5{padding-left: 5px;}
 .pad-t-5{padding-top: 5px;}
 .pad-r-5{padding-right: 5px;}
