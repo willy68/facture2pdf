@@ -127,7 +127,7 @@ class Facture2Pdf extends Html2Pdf
    */
   public function repeatThead($repeat = true)
   {
-    $this->repeat_thead = $repeated;
+    $this->repeat_thead = $repeat;
   }
 
   /**
@@ -232,7 +232,7 @@ class Facture2Pdf extends Html2Pdf
           $paddingB = true;
           $paddingU = $maxH - $ys - $yts - 0.01;
         }
-        // Sauve la row et la ligne en cours en cours
+        // Sauve la row et la ligne en cours
         $row_w = $row;
         $ligne_w = $ligne;
         // On reprend la précédente ligne
@@ -243,18 +243,21 @@ class Facture2Pdf extends Html2Pdf
         $row = ob_get_clean();
         $this->writeHtml($row);
 
+        $closeTable = false;
+        $paddingB = false;
 
+        // On rétablit la row et la ligne en cours
+        $row = $row_w;
+        $ligne = $ligne_w;
+        
         $this->addNewPage();
         if ($thead && $this->repeat_thead) {
           $this->writeHtml($thead);
         } 
+        // On est où sur la page
+        $y = $this->pdf->getY();
         $this->pdf->commitTransaction();
         $this->pdf->startTransaction();
-        $closeTable = false;
-        $paddingB = false;
-        // On rétablit la row et la ligne en cours
-        $row = $row_w;
-        $ligne = $ligne_w;
         // juste pour une bordure!
         if (!$this->repeat_thead) {
           $startTable = true;
