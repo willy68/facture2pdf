@@ -263,7 +263,7 @@ class Facture2Pdf extends Html2Pdf
           $startTable = true;
           include $row_file;
           $row = ob_get_clean();
-          $startTable = false;
+          // $startTable = false;
         }
         // On l'ecrit dans le pdf
         $this->writeHtml($row);
